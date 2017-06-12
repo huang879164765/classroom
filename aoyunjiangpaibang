@@ -1,0 +1,50 @@
+class jiangpaibang(object):
+
+    def __init__(self, nation):
+        self.nation = nation
+        self.jinpai = int(input('请输入金牌数：'))
+        self.yinpai = int(input('请输入银牌数：'))
+        self.tongpai = int(input('请输入铜牌数：'))
+
+    def count(self):
+        self.jiangpaishu = self.jinpai + self.yinpai + self.tongpai
+
+    def get_huojiangqingkuang(self):
+        lst1 = []
+        lst1.append(self.nation)
+        lst1.append(self.jiangpaishu)
+        lst1.append(self.jinpai)
+        lst1.append(self.yinpai)
+        lst1.append(self.tongpai)
+        return lst1
+        print(lst1)
+
+
+a = jiangpaibang('中国')
+a.count()
+China = a.get_huojiangqingkuang()
+
+b = jiangpaibang('英国')
+b.count()
+England = b.get_huojiangqingkuang()
+
+c = jiangpaibang('法国')
+c.count()
+French = c.get_huojiangqingkuang()
+
+d = jiangpaibang('俄罗斯')
+d.count()
+Russia = d.get_huojiangqingkuang()
+
+e = jiangpaibang('美国')
+e.count()
+Ameraica = e.get_huojiangqingkuang()
+
+mylist = []
+mylist.append(China)
+mylist.append(England)
+mylist.append(French)
+mylist.append(Russia)
+mylist.append(Ameraica)
+final_list = sorted(mylist, key=lambda mylist: mylist[2], reverse=True)
+print(final_list)
